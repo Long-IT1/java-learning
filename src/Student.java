@@ -18,6 +18,16 @@ class Student
         return id;
     }
 
+    public String getName()
+    {
+        return name;
+    }
+
+    public int getAge()
+    {
+        return age;
+    }
+
     public double getScore()
     {
         return score;
