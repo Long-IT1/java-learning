@@ -4,8 +4,12 @@ public class Main
     {
         Library lib = new Library();
 
-        lib.addBook(new Book("B001", "Java编程思想", "Bruce", false));
-        lib.addBook(new Book("B002", "三体", "刘慈欣", true));
+        System.out.println("===== 启动：从文件读取 =====");
+        lib.loadFromFile();
+
+        // 手工加书的代码注释掉 —— 数据全部从文件来
+        // lib.addBook(new Book("B001", "Java编程思想", "Bruce", false));
+        // lib.addBook(new Book("B002", "三体", "刘慈欣", true));
 
         System.out.println("===== 借书测试 =====");
 
@@ -86,5 +90,8 @@ public class Main
         {
             u.show();          // 同一行代码，输出不同角色 —— 多态
         }
+
+        System.out.println("===== 保存到文件 =====");
+        lib.saveToFile();
     }
 }
